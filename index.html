@@ -11,22 +11,23 @@
     <div class="navbar">
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
-      <div class="menu" id="menu">
-        <h2>About</h2>
-        <p>This app is used to calculate fire foam requirements for specific tanks. Enter a tank number to see the foam requirements based on pre-configured data.</p>
-        <h3>Available Tanks</h3>
-        <ul>
-          <li>Tank 11: Crude Oil</li>
-          <li>Tank 13: Crude Oil</li>
-          <li>Tank 14: Crude Oil</li>
-          <li>Tank 23: HVGO</li>
-          <li>Tank 25: HVGO</li>
-          <li>Tank 45: Napatha</li>
-          <li>Tank 64: No-Lead Gasoline</li>
-          <li>Tank 65: No-Lead Gasoline</li>
-          <li>Tank 66: Sour Naphtha and Kerosene</li>
-        </ul>
-      </div>
+    <div class="menu" id="menu">
+      <h2>About</h2>
+      <p>This app calculates fire foam requirements based on tank diameter, material, and capacity. The foam calculations are made using industry-standard formulas and are detailed below:</p>
+      <h3>How Calculations Are Made</h3>
+      <ul>
+        <li><strong>Square Footage:</strong> The base area of the tank is calculated as the square of the diameter (diameter × diameter).</li>
+        <li><strong>80% Coverage:</strong> Only 80% of the tank’s area is considered for foam application to account for practical coverage.</li>
+        <li><strong>Critical Application Rate:</strong> This is calculated as 20% (0.2) of the 80% coverage area.</li>
+        <li><strong>Foam Concentrate (1% and 3%):</strong>
+          <ul>
+            <li>For 1% foam: Multiply the critical application rate by 0.01 (1%).</li>
+            <li>For 3% foam: Multiply the critical application rate by 0.03 (3%).</li>
+          </ul>
+        </li>
+        <li><strong>Total Foam Required:</strong> Multiply the foam concentrate (1% or 3%) by 65 minutes for total usage over time.</li>
+      </ul>
+    </div>
   <div class="container">
     <h1>Kenai Fire Foam Calculator <i class="fa-solid fa-fire-extinguisher"></i></h1>
     <label for="tankNumber">Tank Number:</label>
