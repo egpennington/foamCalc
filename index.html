@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fire Foam Calculator</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+      <div class="menu" id="menu">
+        <h2>About</h2>
+        <p>This app is used to calculate fire foam requirements for specific tanks. Enter a tank number to see the foam requirements based on pre-configured data.</p>
+        <h3>Available Tanks</h3>
+        <ul>
+          <li>Tank 11: Crude Oil</li>
+          <li>Tank 13: Crude Oil</li>
+          <li>Tank 14: Crude Oil</li>
+          <li>Tank 23: HVGO</li>
+          <li>Tank 25: HVGO</li>
+          <li>Tank 64: No-Lead Gasoline</li>
+          <li>Tank 66: Sour Naphtha and Kerosene</li>
+        </ul>
+      </div>
+  <div class="container">
+    <h1>Kenai Fire Foam Calculator <i class="fa-solid fa-fire-extinguisher"></i></h1>
+    <label for="tankNumber">Tank Number:</label>
+    <input type="number" id="tankNumber" placeholder="Enter tank number" onkeydown="if(event.key === 'Enter') calculateFoam()" />
+
+    <button onclick="calculateFoam()">Calculate</button>
+
+    <div id="results" class="results" style="display: none;">
+      <p><strong>Tank Material:</strong> <span id="tankMaterial"></span></p>
+      <p><strong>Tank Capacity:</strong> <span id="tankCapacity"></span> gallons</p>
+      <p><strong>Square Foot of Tank:</strong> <span id="sqFoot"></span></p>
+      <p><strong>Critical Application Rate:</strong> <span id="criticalRate"></span> gallons per minute</p>
+      <div class="foam-columns">
+        <div>
+          <h3>1% Foam</h3>
+          <p><strong>GPM:</strong> <span id="foam1"></span></p>
+          <p class="txt-sm"><strong>Total Concentrate Needed:</strong> <span id="totalFoam1"></span> gallons</p>
+        </div>
+        <div>
+          <h3>3% Foam</h3>
+          <p><strong>GPM:</strong> <span id="foam3"></span></p>
+          <p class="txt-sm"><strong>Total Concentrate Needed:</strong> <span id="totalFoam3"></span> gallons</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
+
