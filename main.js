@@ -35,6 +35,7 @@ function toggleMenu() {
       const totalFoam3 = Math.round(foam3GPM * 65);
 
       // Update results
+      document.getElementById("tankLocation").textContent = tank.location;
       document.getElementById("tankMaterial").textContent = tank.material;
       document.getElementById("tankCapacity").textContent = tank.capacity.toLocaleString();
       document.getElementById("tankContainment").textContent = tank.containment.toLocaleString()
