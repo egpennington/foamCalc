@@ -11,7 +11,7 @@ body {
     position: relative;
   }
 
-  .navbar {
+.navbar {
     width: 100%;
     max-width: 360px;
     padding: 1.2rem;
@@ -23,17 +23,17 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-  }
+}
 
-  .hamburger {
+.hamburger {
     cursor: pointer;
     font-size: 1.5rem;
     margin-left: auto;
     padding: 5px 20px;
-  }
+}
   
 
-  .menu {
+.menu {
     position: fixed;
     top: 55px;
     left: -100%;
@@ -45,58 +45,58 @@ body {
     padding: 20px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease;
-  }  
+}  
 
-  .menu.active {
+.menu.active {
     left: 0; /* Slide in */
-  }
+}
 
-  .menu h2 {
+.menu h2 {
     margin-top: 0;
-  }
+}
 
-  .menu ul {
+.menu ul {
     list-style-type: none;
     padding: 0;
-  }
+}
 
-  .menu ul li {
+.menu ul li {
     margin: 10px 0;
-  }
+}
   
-  .container {
+.container {
     background: #ffffff;
     padding: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 360px;
-  }
+}
   
-  h1 {
+h1 {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 15px;
-  }
+}
   
-  label {
+label {
     display: block;
     margin-bottom: 5px;
     font-size: 0.9rem;
     font-weight: bold;
-  }
+}
   
-  input {
+input {
     font-size: 2rem;
     width: 95%;
     padding: 20px 8px;
     margin-bottom: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
   
-  button {
+button {
     width: 100%;
     padding: 10px;
     background: #2881e7;
@@ -105,42 +105,42 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-  }
+}
   
-  button:hover {
+button:hover {
     background: #0056b3;
-  }
+}
   
-  .results {
+.results {
     margin-top: 20px;
     background: #f9f9f9;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
+}
   
-  .results p {
+.results p {
     margin: 0;
     padding: 4px 0;
     font-size: 0.9rem;
-  }
+}
   
-  .foam-columns {
+.foam-columns {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
+}
   
-  .foam-columns div {
+.foam-columns div {
     width: 100%;
-  }
+}
   
-  .foam-columns h3 {
+.foam-columns h3 {
     text-align: center;
     margin-bottom: 5px;
-  }
+}
 
-  section {
+section {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -148,16 +148,16 @@ body {
     padding: 16px;
     margin: 10px;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  }
+}
 
-  section:hover {
+section:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
     border-color: rgba(0, 0, 0, 0.15);
     transform: translateY(-1px);
-  }  
+}  
   
   /* Media query for larger screens */
-  @media (min-width: 600px) {
+@media (min-width: 600px) {
     .container {
       max-width: 500px;
       padding: 20px;
