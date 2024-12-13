@@ -16,7 +16,10 @@ body {
     max-width: 360px;
     padding: 1.2rem;
     margin: 0 auto;
-    background-color: #D32F2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B263B;
     color: #fff;
     position: fixed;
     top: 0;
@@ -27,11 +30,17 @@ body {
 
 .hamburger {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-left: auto;
-    padding: 5px 20px;
+    padding-left: 5px;
 }
-  
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  flex: 1;
+}  
 
 .menu {
     position: fixed;
@@ -97,10 +106,10 @@ input {
 }
   
 button {
-    width: 100%;
-    padding: 10px;
-    background: #2881e7;
-    color: #ffffff;
+    width: 98%;
+    padding: 20px 10px;
+    background: #FFC107;
+    color: #212121;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -108,7 +117,7 @@ button {
 }
   
 button:hover {
-    background: #0056b3;
+    background: #FFA000;
 }
   
 .results {
