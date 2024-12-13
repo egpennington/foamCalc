@@ -6,7 +6,7 @@ function toggleMenu() {
     const hamburger = document.querySelector(".hamburger");
   
     menu.classList.toggle("active");
-    hamburger.innerHTML = menu.classList.contains("active") ? "&#x2715;" : "☰";
+    hamburger.innerHTML = menu.classList.contains("active") ? "&#x2715;" : "&#9776;";
   } 
     
     function calculateFoam() {
