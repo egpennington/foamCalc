@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
+    </nav>
     <div class="menu" id="menu">
       <h2>About</h2>
       <p>This app calculates fire foam requirements based on tank diameter, material, and capacity. The foam calculations are made using industry-standard formulas and are detailed below:</p>
@@ -37,20 +37,21 @@
 
     <div id="results" class="results" style="display: none;">
       <p><strong>Tank Material:</strong> <span id="tankMaterial"></span></p>
-      <p><strong>Tank Capacity:</strong> <span id="tankCapacity"></span> gallons</p>
+      <p><strong>Tank Capacity:</strong> <span id="tankCapacity"></span> bbls</p>
+      <p><strong>Tank Containment Basin:</strong> <span id="tankContainment"></span> bbls</p>
       <p><strong>Square Foot of Tank:</strong> <span id="sqFoot"></span></p>
       <p><strong>Critical Application Rate:</strong> <span id="criticalRate"></span> gallons per minute</p>
       <div class="foam-columns">
-        <div>
+        <section>
           <h3>1% Foam</h3>
           <p><strong>GPM:</strong> <span id="foam1"></span></p>
           <p class="txt-sm"><strong>Total Concentrate Needed:</strong> <span id="totalFoam1"></span> gallons</p>
-        </div>
-        <div>
+        </section>
+        <section>
           <h3>3% Foam</h3>
           <p><strong>GPM:</strong> <span id="foam3"></span></p>
           <p class="txt-sm"><strong>Total Concentrate Needed:</strong> <span id="totalFoam3"></span> gallons</p>
-        </div>
+        </section>
       </div>
     </div>
   </div>

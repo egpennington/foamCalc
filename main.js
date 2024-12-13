@@ -36,13 +36,14 @@ function toggleMenu() {
 
       // Update results
       document.getElementById("tankMaterial").textContent = tank.material;
-      document.getElementById("tankCapacity").textContent = tank.capacity;
-      document.getElementById("sqFoot").textContent = sqFoot;
+      document.getElementById("tankCapacity").textContent = tank.capacity.toLocaleString();
+      document.getElementById("tankContainment").textContent = tank.containment.toLocaleString()
+      document.getElementById("sqFoot").textContent = sqFoot.toLocaleString();
       document.getElementById("criticalRate").textContent = criticalRate;
       document.getElementById("foam1").textContent = foam1GPM;
       document.getElementById("foam3").textContent = foam3GPM;
-      document.getElementById("totalFoam1").textContent = totalFoam1;
-      document.getElementById("totalFoam3").textContent = totalFoam3;
+      document.getElementById("totalFoam1").textContent = totalFoam1.toLocaleString();
+      document.getElementById("totalFoam3").textContent = totalFoam3.toLocaleString();
 
       document.getElementById("results").style.display = "block";
     }

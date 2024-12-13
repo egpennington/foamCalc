@@ -14,8 +14,9 @@ body {
   .navbar {
     width: 100%;
     max-width: 360px;
+    padding: 1.2rem;
     margin: 0 auto;
-    background-color: #007BFF;
+    background-color: #D32F2F;
     color: #fff;
     position: fixed;
     top: 0;
@@ -87,8 +88,9 @@ body {
   }
   
   input {
-    width: 100%;
-    padding: 8px;
+    font-size: 2rem;
+    width: 95%;
+    padding: 20px 8px;
     margin-bottom: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -97,7 +99,7 @@ body {
   button {
     width: 100%;
     padding: 10px;
-    background: #007BFF;
+    background: #2881e7;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -137,6 +139,22 @@ body {
     text-align: center;
     margin-bottom: 5px;
   }
+
+  section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    padding: 16px;
+    margin: 10px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  section:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+  }  
   
   /* Media query for larger screens */
   @media (min-width: 600px) {
