@@ -6,6 +6,7 @@ const tankData = {
     20: { diameter: 200, capacity: 223000, material: "Low Sulfur VTB/LCO", containment: 309000 },
     22: { diameter: 134, capacity: 100000, material: "Diesel/Jet", containment: 190000 },
     23: { diameter: 219, capacity: 300000, material: "HVGO", containment: 430000 },
+    24: { diameter: 95, capacity: 50000, material: "AGO", containment: 205000 },
     25: { diameter: 252, capacity: 452000, material: "Hih Sulfur Vac Bottoms", containment: 540000 },
     33: { diameter: 52, capacity: 15000, material: "Bunker/VTB", containment: 46400 },
     35: { diameter: 134, capacity: 100000, material: "Jet", containment: 190000 },
