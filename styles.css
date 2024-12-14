@@ -13,9 +13,9 @@ body {
 
 .navbar {
     width: 100%;
-    max-width: 360px;
+    /* max-width: 360px; */
     padding: 1.2rem;
-    margin: 0 auto;
+    margin-left: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,10 +36,31 @@ body {
 }
 
 .navbar h1 {
-  margin: 0;
   font-size: 1.2rem;
   text-align: center;
   flex: 1;
+}  
+
+/* MENU Styles */
+.about-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+    max-height: 80%;
+    overflow-y: auto;
+}
+  
+.show {
+    display: block;
 }  
 
 .menu {
@@ -50,14 +71,14 @@ body {
     max-width: 360px;
     margin: 0 auto;
     height: calc(100vh - 50px);
-    background: white;
+    background: #333;
     padding: 20px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease;
 }  
 
 .menu.active {
-    left: 0; /* Slide in */
+    left: 0;
 }
 
 .menu h2 {
@@ -66,11 +87,34 @@ body {
 
 .menu ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .menu ul li {
     margin: 10px 0;
+    cursor: pointer;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu ul li:hover,
+.menu ul li a:hover {
+    background: #fff;
+    color: #333;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
 }
   
 .container {
@@ -186,31 +230,13 @@ section:hover {
     border-color: rgba(0, 0, 0, 0.15);
     transform: translateY(-1px);
 }  
-  
-  /* Media query for larger screens */
-@media (min-width: 600px) {
-    .container {
-      max-width: 500px;
-      padding: 20px;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    .foam-columns {
-      flex-direction: row;
-    }
-  
-    .foam-columns div {
-      width: 48%;
-    }
 
-    .navbar {
-        max-width: 500px;
-    }
-
-    .menu {
-        max-width: 500px;
-    }
-  }
+footer {
+    background-color: #1B263B; /* Navy blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom if content is less */
+}

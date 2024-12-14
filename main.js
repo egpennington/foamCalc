@@ -6,8 +6,17 @@ function toggleMenu() {
 
   menu.classList.toggle("active");
   hamburger.innerHTML = menu.classList.contains("active")
-    ? "&#x2715;" // Close icon
-    : '<i class="fa-solid fa-bars"></i>'; // Hamburger menu icon
+    ? "&#x2715;"
+    : '<i class="fa-solid fa-bars"></i>';
+}
+
+function showAboutPopup() {
+  const aboutPopup = document.getElementById("about-popup")
+  aboutPopup.classList.add("show");
+}
+
+function closeAboutPopup() {
+  document.getElementById("about-popup").classList.remove("show");
 }
 
 function populateTankDropdown() {
@@ -98,4 +107,5 @@ document.addEventListener("DOMContentLoaded", () => {
 window.calculateFoam = calculateFoam;
 window.toggleMenu = toggleMenu;
 window.recalculateEffect = recalculateEffect;
-
+window.showAboutPopup = showAboutPopup
+window.closeAboutPopup = closeAboutPopup
