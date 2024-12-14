@@ -229,7 +229,20 @@ section:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
     border-color: rgba(0, 0, 0, 0.15);
     transform: translateY(-1px);
-}  
+}
+
+#loading-message {
+    display: none; /* Hidden by default */
+    font-size: 1.2rem;
+    color: #007BFF; /* Bright blue for visibility */
+    text-align: center;
+    margin-bottom: 10px;
+}
+  
+.fa-spinner {
+    margin-right: 8px; /* Adds space between spinner and text */
+}
+  
 
 footer {
     background-color: #1B263B; /* Navy blue background */

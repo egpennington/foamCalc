@@ -75,32 +75,33 @@ function calculateFoam() {
   document.getElementById("foam3").textContent = foam3GPM.toLocaleString();
   document.getElementById("totalFoam1").textContent = totalFoam1.toLocaleString();
   document.getElementById("totalFoam3").textContent = totalFoam3.toLocaleString();
-
   document.getElementById("results").style.display = "block";
 }
 
 // Recalculate button animation
 function recalculateEffect() {
   const resultsSection = document.getElementById("results");
+  const loadingMessage = document.getElementById("loading-message");
 
-  // Add a class for the visual effect
+  loadingMessage.style.display = "block";
+
   resultsSection.classList.add("highlight-effect");
 
-  // Run the foam calculation
-  calculateFoam();
-
-  // Remove the class after 1 second
   setTimeout(() => {
+   
+    calculateFoam();
+
+    loadingMessage.style.display = "none";
+
     resultsSection.classList.remove("highlight-effect");
-  }, 1000); // 1 second for the visual effect
+  }, 1500);
 }
 
-// Event listener for populating dropdown and attaching calculateFoam to dropdown change
 document.addEventListener("DOMContentLoaded", () => {
-  populateTankDropdown(); // Populate dropdown on page load
+  populateTankDropdown();
 
   const tankDropdown = document.getElementById("tankNumber");
-  tankDropdown.addEventListener("change", calculateFoam); // Run calculation on tank selection
+  tankDropdown.addEventListener("change", calculateFoam); 
 });
 
 // Attach functions to the global window object for external calls

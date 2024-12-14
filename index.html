@@ -56,6 +56,9 @@
     <button onclick="recalculateEffect()">Recalculate</button>
 
     <div id="results" class="results" style="display: none;">
+      <div id="loading-message" style="display: none; text-align: center; font-size: 1.2rem; color: #007BFF;">
+        <i class="fa fa-spinner fa-spin"></i> Recalculating...
+      </div>
       <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> <span id="tankLocation"></span> </p>
       <p><strong>Tank Material:</strong> <span id="tankMaterial"></span></p>
       <p><strong>Tank Capacity:</strong> <span id="tankCapacity"></span> bbls</p>
