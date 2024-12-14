@@ -8,7 +8,7 @@ const tankData = {
     22: { diameter: 134, capacity: 100000, material: "Diesel/Jet", containment: 190000, location: "E st and 5th st" },
     23: { diameter: 219, capacity: 300000, material: "HVGO", containment: 430000, location: "H st and 5th st" },
     24: { diameter: 95, capacity: 50000, material: "AGO", containment: 205000, location: "G st and 5th st" },
-    25: { diameter: 252, capacity: 452000, material: "Hih Sulfur Vac Bottoms", containment: 540000, location: "I st" },
+    25: { diameter: 252, capacity: 452000, material: "Hi Sulfur Vac Bottoms", containment: 540000, location: "I st" },
     30: { diameter: 42.5, capacity: 10000, material: "DF2/Jet A", containment: 167000, location: "A st and 4th st" },
     31: { diameter: 52, capacity: 15000, material: "DF2/DF1", containment: 167000, location: "A st" },
     32: { diameter: 112, capacity: 70000, material: "DF2/Jet A", containment: 167000, location: "B st and 4th st" },
