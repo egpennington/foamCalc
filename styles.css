@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1B263B;
+    background-color: #254d97;
     color: #fff;
     position: fixed;
     top: 0;
@@ -104,15 +104,37 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+#tankNumber {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+#results {
+  opacity: 1;
+  transition: opacity 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+#results.highlight-effect {
+  background-color: #f1f8ff;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+  border: 2px solid #007bff;
+  opacity: 0.25;
+}  
   
 button {
     width: 98%;
     padding: 20px 10px;
     background: #FFC107;
-    color: #212121;
+    color: #0f2247;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
 }
   

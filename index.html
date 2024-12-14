@@ -34,11 +34,14 @@
       </ul>
     </div>
   <div class="container">
-    
-    <label for="tankNumber">Tank Number:</label>
-    <input type="number" id="tankNumber" placeholder="Enter tank number" onkeydown="if(event.key === 'Enter') calculateFoam()" />
+    <p>Select a tank to calculate automatically. Use the "Recalculate" button if needed.</p>
+    <label for="tankNumber">Select a Tank:</label>    
+    <select name="tankNumber" id="tankNumber" onchange="calculateFoam()">
+      <!-- Tank options will be populated dynamically -->
+    </select>
 
-    <button onclick="calculateFoam()">Calculate</button>
+    <button onclick="recalculateEffect()">Recalculate</button>
+
 
     <div id="results" class="results" style="display: none;">
       <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> <span id="tankLocation"></span> </p>
