@@ -52,8 +52,9 @@ function calculateFoam() {
   const tank = tankData[tankNumber];
 
   // Calculate square footage
-  const sqFoot = Math.round(tank.diameter * tank.diameter);
-  const coveredArea = Math.round(sqFoot * 0.8); // 80% coverage
+  const diameterSq = Math.round(tank.diameter * tank.diameter)
+  const sqFoot = Math.round(diameterSq * 0.8)
+  const coveredArea = Math.round(diameterSq * 0.8);
 
   // Calculate critical application rate
   const criticalRate = Math.round(coveredArea * 0.2);
