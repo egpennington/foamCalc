@@ -148,7 +148,8 @@ body {
   }
   
   .close-about:hover {
-    color: #FF0000;
+    color: #fff;
+    background: #254d97;
   }
   
  /* ROUTE MODAL Styles */
