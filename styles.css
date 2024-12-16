@@ -160,12 +160,12 @@ body {
     transform: translate(-50%, -50%);
     z-index: 100;
     background: #fff;
-    padding: 20px;
+    padding: 5px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     max-width: 90%;
-    max-height: 90%;
+    max-height: 95%;
     overflow: hidden;
   }
   
@@ -180,25 +180,45 @@ body {
     display: block;
   }
   
+  /* Close button styling */
   .close-route {
-    padding: 5px;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    color: #141515;
-    background: #fff;
+    color: #333;
+    padding: 5px;
     transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
   }
   
   .close-route:hover {
     color: #fff;
-    background: #254d97; /* Adds a background highlight on hover */
-    transform: scale(1.2); /* Slight scaling for interactivity */
+    background: #254d97;
+    transform: scale(1.2);
   }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .close-route {
+      font-size: 1.3rem;
+      padding: 4px;
+      top: 5px;
+      right: 5px;
+    }
+  
+    .route-popup {
+      padding: 10px;
+      max-width: 95%;
+      max-height: 85%;
+    }
+  
+    .route-popup img {
+      max-height: 70vh;
+    }
+  }  
     
   /* CONTAINER and RESULTS Styles */
   .container {
