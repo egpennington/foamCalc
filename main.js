@@ -1,5 +1,5 @@
 import tankData from './tankData.js';
-import tankRoute from './tankRoute.js';
+import tankRoutes from './tankRoutes.js';
 
 function toggleMenu() {
   const menu = document.getElementById("menu");
@@ -12,17 +12,39 @@ function toggleMenu() {
 }
 
 function showAboutPopup() {
-  const aboutPopup = document.getElementById("about-popup")
+  const aboutPopup = document.getElementById("about-popup");
   aboutPopup.classList.add("show");
 }
 
 function closeAboutPopup() {
-  document.getElementById("about-popup").classList.remove("show");
+  const aboutPopup = document.getElementById("about-popup");
+  aboutPopup.classList.remove("show");
+}
+
+function showTankRoute(tankNumber) {
+  const tankKey = `Tank ${tankNumber}`;
+  const routeImage = tankRoutes[tankKey];
+
+  if (routeImage) {
+    const routePopup = document.getElementById("route-popup");
+    const routeImageElement = document.getElementById("route-image");
+
+    routeImageElement.src = routeImage;
+    routePopup.classList.add("show");
+  } else {
+    alert(`Route not available for Tank ${tankKey}`);
+  }
+}
+
+function closeTankRoute() {
+  const routePopup = document.getElementById("route-popup");
+  routePopup.classList.remove("show");
 }
 
 function populateTankDropdown() {
   const tankDropdown = document.getElementById("tankNumber");
-  tankDropdown.innerHTML = "";
+  
+  if (tankDropdown.children.length > 0) return; // Avoid re-population
 
   // Add a default placeholder option
   const defaultOption = document.createElement("option");
@@ -41,7 +63,6 @@ function populateTankDropdown() {
   });
 }
 
-// Foam calculation logic
 function calculateFoam() {
   const tankNumber = parseInt(document.getElementById("tankNumber").value);
 
@@ -53,18 +74,15 @@ function calculateFoam() {
   const tank = tankData[tankNumber];
 
   // Calculate square footage
-  const diameterSq = Math.round(tank.diameter * tank.diameter)
-  const sqFoot = Math.round(diameterSq * 0.8)
-  const coveredArea = Math.round(diameterSq * 0.8);
-
-  // Calculate critical application rate
-  const criticalRate = Math.round(coveredArea * 0.2);
+  const diameterSq = Math.round(tank.diameter * tank.diameter);
+  const sqFoot = Math.round(diameterSq * 0.8); // 80% coverage
+  const criticalRate = Math.round(sqFoot * 0.2); // 20% of covered area
 
   // Foam requirements
-  const foam1GPM = Math.round(criticalRate * 0.01);
-  const foam3GPM = Math.round(criticalRate * 0.03);
-  const totalFoam1 = Math.round(foam1GPM * 65);
-  const totalFoam3 = Math.round(foam3GPM * 65);
+  const foam1GPM = Math.round(criticalRate * 0.01); // 1% foam
+  const foam3GPM = Math.round(criticalRate * 0.03); // 3% foam
+  const totalFoam1 = Math.round(foam1GPM * 65); // 65 min for 1%
+  const totalFoam3 = Math.round(foam3GPM * 65); // 65 min for 3%
 
   // Update the UI with results
   document.getElementById("tankLocation").textContent = tank.location;
@@ -77,10 +95,10 @@ function calculateFoam() {
   document.getElementById("foam3").textContent = foam3GPM.toLocaleString();
   document.getElementById("totalFoam1").textContent = totalFoam1.toLocaleString();
   document.getElementById("totalFoam3").textContent = totalFoam3.toLocaleString();
+
   document.getElementById("results").style.display = "block";
 }
 
-// Recalculate button animation
 function recalculateEffect() {
   const resultsSection = document.getElementById("results");
   const loadingMessage = document.getElementById("loading-message");
@@ -90,11 +108,8 @@ function recalculateEffect() {
   resultsSection.classList.add("highlight-effect");
 
   setTimeout(() => {
-   
     calculateFoam();
-
     loadingMessage.style.display = "none";
-
     resultsSection.classList.remove("highlight-effect");
   }, 1500);
 }
@@ -103,12 +118,14 @@ document.addEventListener("DOMContentLoaded", () => {
   populateTankDropdown();
 
   const tankDropdown = document.getElementById("tankNumber");
-  tankDropdown.addEventListener("change", calculateFoam); 
+  tankDropdown.addEventListener("change", calculateFoam);
 });
 
 // Attach functions to the global window object for external calls
 window.calculateFoam = calculateFoam;
 window.toggleMenu = toggleMenu;
 window.recalculateEffect = recalculateEffect;
-window.showAboutPopup = showAboutPopup
-window.closeAboutPopup = closeAboutPopup
+window.showAboutPopup = showAboutPopup;
+window.closeAboutPopup = closeAboutPopup;
+window.showTankRoute = showTankRoute;
+window.closeTankRoute = closeTankRoute;
