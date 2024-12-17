@@ -284,6 +284,18 @@ body {
   color: #0056b3;
   font-size: 1.1em;
 }
+
+.result-item:hover {
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.15); /* Shift shadow to the right and down */
+  transform: translate(2px, 2px); /* Slight movement down and right */
+  background-color: #f9f9f9; /* Slight background color change for depth */
+  cursor: pointer; /* Indicates interactivity */
+}
+
+.result-item:active {
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow when clicked */
+  transform: translate(1px, 1px); /* Slight movement for active state */
+}
   
 #loading-message {
     display: none;
