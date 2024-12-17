@@ -63,6 +63,22 @@ function populateTankDropdown() {
   });
 }
 
+function calculateTankVolumes(tank) {
+  const PI = Math.PI;
+  const radius = tank.diameter / 2;
+  const baseArea = PI * Math.pow(radius, 2); // Area in square feet
+
+  // Volume calculations
+  const volumePerInch = baseArea * (1 / 12); // Cubic feet for 1 inch
+  const volumePerFoot = baseArea;            // Cubic feet for 1 foot
+
+  // Convert to gallons (1 cubic foot = 7.48052 gallons)
+  return {
+    volumePerInch: Math.round(volumePerInch * 7.48052).toLocaleString(),
+    volumePerFoot: Math.round(volumePerFoot * 7.48052).toLocaleString(),
+  };
+}
+
 function calculateFoam() {
   const tankNumber = parseInt(document.getElementById("tankNumber").value);
 
@@ -84,6 +100,9 @@ function calculateFoam() {
   const totalFoam1 = Math.round(foam1GPM * 65); // 65 min for 1%
   const totalFoam3 = Math.round(foam3GPM * 65); // 65 min for 3%
 
+  // Tank volume calculations
+  const volumes = calculateTankVolumes(tank);
+
   // Update the UI with results
   document.getElementById("tankLocation").textContent = tank.location;
   document.getElementById("tankMaterial").textContent = tank.material;
@@ -95,6 +114,8 @@ function calculateFoam() {
   document.getElementById("foam3").textContent = foam3GPM.toLocaleString();
   document.getElementById("totalFoam1").textContent = totalFoam1.toLocaleString();
   document.getElementById("totalFoam3").textContent = totalFoam3.toLocaleString();
+  document.getElementById("volumePerInch").textContent = volumes.volumePerInch;
+  document.getElementById("volumePerFoot").textContent = volumes.volumePerFoot;
 
   document.getElementById("results").style.display = "block";
 }
