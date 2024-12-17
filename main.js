@@ -32,7 +32,7 @@ function showTankRoute(tankNumber) {
     routeImageElement.src = routeImage;
     routePopup.classList.add("show");
   } else {
-    alert(`Route not available for Tank ${tankKey}`);
+    alert(`Route not available for ${tankKey}`);
   }
 }
 
