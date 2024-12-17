@@ -1,4 +1,5 @@
 const tankRoutes = {
+    "Tank 10": "../images/tank10Route.png",
     "Tank 11": "../images/tank11Route.png",
     "Tank 12": "../images/tank12Route.png",
     "Tank 13": "../images/tank13Route.png",
