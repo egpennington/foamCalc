@@ -29,6 +29,11 @@ const tankData = {
     67: { diameter: 160, capacity: 175000, material: "Napatha", containment: 205000, location: "H st and 5th st" },
     70: { diameter: 85, capacity: 35000, material: "Butane", containment: 35000, location: "B st and 1st st" },
     80: { diameter: 85, capacity: 40000, material: "Propane", containment: 5000, location: "1st st" },
+    2401: { diameter: 140, capacity: 132000, material: "Crude Oil", containment: 1000, location: "KPL" },
+    2402: { diameter: 140, capacity: 132000, material: "Crude Oil", containment: 1000, location: "KPL" },
+    2405: { diameter: 160, capacity: 200000, material: "Crude Oil", containment: 1000, location: "KPL" },
+    2407: { diameter: 180, capacity: 250000, material: "Crude Oil", containment: 1000, location: "KPL" },
+    2408: { diameter: 180, capacity: 250000, material: "Crude Oil", containment: 1000, location: "KPL" },
   }
 
   export default tankData
