@@ -27,6 +27,11 @@ const tankRoutes = {
     "Tank 66": "images/tank66Route.png",
     "Tank 67": "images/tank67Route.png",
     "Tank 70": "images/tank70Route.png",
+    "Tank 2401": "images/tank2401Route.png",
+    "Tank 2402": "images/tank2402Route.png",
+    "Tank 2405": "images/tank2405Route.png",
+    "Tank 2407": "images/tank2407Route.png",
+    "Tank 2408": "images/tank2408Route.png",
   }
 
   export default tankRoutes
