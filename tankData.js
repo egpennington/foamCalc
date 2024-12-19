@@ -12,7 +12,7 @@ const tankData = {
     30: { diameter: 42.5, capacity: 10000, material: "DF2/Jet A", containment: 167000, location: "A st and 4th st" },
     31: { diameter: 52, capacity: 15000, material: "DF2/DF1", containment: 167000, location: "A st" },
     32: { diameter: 112, capacity: 70000, material: "DF2/Jet A", containment: 167000, location: "B st and 4th st" },
-    33: { diameter: 52, capacity: 15000, material: "Bunker/VTB", containment: 46400 },
+    33: { diameter: 52, capacity: 15000, material: "Bunker/VTB", containment: 46400, location: "B st and 4th st"  },
     35: { diameter: 134, capacity: 100000, material: "Jet", containment: 190000, location: "G st and 5th st" },
     36: { diameter: 173, capacity: 200000, material: "Diesel Fuel #2", containment: 540000, location: "I st and 5th st" },
     37: { diameter: 134, capacity: 100000, material: "Light Cycle Oil/Jet A", containment: 309000, location: "C st and 3rd st" },
