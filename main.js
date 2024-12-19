@@ -125,7 +125,6 @@ function calculateEffect() {
   const calculatingMessage = document.getElementById("calculating-message");
   const resultsSection = document.getElementById("results");
 
-  // Show "Calculating..." message and hide results initially
   calculatingMessage.style.display = "block";
   resultsSection.style.display = "none";
 
@@ -135,9 +134,6 @@ function calculateEffect() {
     resultsSection.style.display = "block"; // Show results after calculation
   }, 1500); // Timeout duration for "Calculating..." effect
 }
-
-
-
 function recalculateEffect() {
   const resultsSection = document.getElementById("results");
   const loadingMessage = document.getElementById("loading-message");
