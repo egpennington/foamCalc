@@ -67,12 +67,21 @@
       <div id="loading-message" style="display: none; text-align: center; font-size: 1.2rem; color: #007BFF;">
         <i class="fa fa-spinner fa-spin"></i> Recalculating...
       </div>
-      <p class="location">
-        <span class="location-clickable" onclick="showTankRoute(document.getElementById('tankNumber').value)">
-          <i class="fa-solid fa-location-dot"></i> Location: 
-          <span id="tankLocation"></span>
-        </span>
-      </p>      
+      <div class="location-weather">
+        <p class="location">
+          <span class="location-clickable" onclick="showTankRoute(document.getElementById('tankNumber').value)">
+            click
+            <i class="fa-solid fa-location-dot"></i> Location: 
+            <span id="tankLocation"></span>
+          </span>
+        </p>
+        <div id="weather-info" class="weather-container">
+          <p>Wind <i class="fa-solid fa-wind fa-lg"></i></p>
+          <span id="wind-direction"></span>
+          <span id="wind-speed"></span>
+        </div>
+      </div>     
+
       <p class="result-item"><strong>Tank Material:</strong> <span id="tankMaterial"></span></p>
       <p class="result-item"><strong>Tank Capacity:</strong> <span id="tankCapacity"></span> bbls</p>
       <p class="result-item"><strong>Tank Containment:</strong> <span id="tankContainment"></span> bbls</p>
