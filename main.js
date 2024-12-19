@@ -80,6 +80,7 @@ function calculateTankVolumes(tank) {
 }
 
 function calculateFoam() {
+  calculateEffect()
   const tankNumber = parseInt(document.getElementById("tankNumber").value);
 
   if (!tankData[tankNumber]) {
@@ -120,6 +121,19 @@ function calculateFoam() {
   document.getElementById("results").style.display = "block";
 }
 
+function calculateEffect() {
+  const calculatingMessage = document.getElementById("calculating-message");
+  const resultsSection = document.getElementById("results");
+
+  calculatingMessage.style.display = "block";
+  resultsSection.style.display = "none";
+
+  setTimeout(() => {
+    calculateFoam(); // Perform the calculations
+    calculatingMessage.style.display = "none"; // Hide "Calculating..." message
+    resultsSection.style.display = "block"; // Show results after calculation
+  }, 1500); // Timeout duration for "Calculating..." effect
+}
 function recalculateEffect() {
   const resultsSection = document.getElementById("results");
   const loadingMessage = document.getElementById("loading-message");

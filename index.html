@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
   <title>Kenai FoamCalc</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,7 +30,7 @@
   <article id="about-popup" class="about-popup">
     <button onclick="closeAboutPopup()" class="close-about">&times;</button>
     <h2>About</h2>
-    <p>This app calculates fire foam requirements based on tank diameter, material, and capacity. The foam calculations are made using industry-standard formulas and are detailed below:</p>
+    <p>This app calculates fire foam requirements based on tank diameter, material, and capacity. The foam calculations are made using industry-standard formulas and are detailed below. Additionally, it retrieves real-time wind speed and direction to assist with emergency response decisions.</p>
     <h3>Clickable Location Feature</h3>
       <p>
         The <i class="fa-solid fa-location-dot" style="color: #FF5722;"></i> <strong>Location</strong> section in the results displays the tank’s location. Click the location or icon to view a detailed route image that provides directions to the selected tank.
@@ -47,6 +48,13 @@
       </li>
       <li><strong>Total Foam Required:</strong> Multiply the foam concentrate (1% or 3%) by 65 minutes for total usage over time.</li>
     </ul>
+    <h3>Wind Data</h3>
+      <p>Real-time wind speed and direction are retrieved using the OpenWeather API:</p>
+      <ul>
+        <li><strong>Wind Speed:</strong> Displays the current wind speed in mph.</li>
+        <li><strong>Wind Direction:</strong> Converts wind degree into compass direction (e.g., N, NE, SW).</li>
+      </ul>
+      <p>This data helps responders understand environmental conditions better when planning foam application.</p>
   </article>
 
   <div class="container">
@@ -55,6 +63,10 @@
     <select name="tankNumber" id="tankNumber" onchange="calculateFoam()">
       <!-- Tank options will be populated dynamically -->
     </select>
+
+    <div id="calculating-message" style="display: none; text-align: center; font-size: 1.2rem; color: #007BFF;">
+      <i class="fa fa-spinner fa-spin"></i> Calculating...
+    </div>    
 
     <div id="route-popup" class="route-popup">
       <button class="close-route" onclick="closeTankRoute()"><i class="fa-regular fa-circle-xmark fa-xl"></i></button>
