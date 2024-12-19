@@ -142,6 +142,46 @@ document.addEventListener("DOMContentLoaded", () => {
   tankDropdown.addEventListener("change", calculateFoam);
 });
 
+/* WIND direction and speed */
+const lat = 60.6834; 
+const lon = -151.3714;
+
+function getWindDirection(deg) {
+  const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+  const index = Math.round(deg / 45) % 8;
+  return directions[index];
+}
+
+fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial`)
+  .then(res => {
+    if (!res.ok) {
+      throw new Error("Weather data not available");
+    }
+    return res.json(); // Close this .then() properly
+  })
+  .then(data => {
+    const windDeg = data.wind.deg;
+    const windSpeed = data.wind.speed;
+
+    const windDirection = getWindDirection(windDeg);
+
+    const weatherInfo = `
+      <div class="weather-container">
+        <p>Wind <i class="fa-solid fa-wind"></i></p>
+        <span>${windDirection}</span>
+        <span>${windSpeed} mph</span>
+      </div>
+    `;
+
+    // Inject the weather info into the HTML
+    document.getElementById('weather-info').innerHTML = weatherInfo;
+
+    console.log(`Speed: ${windSpeed} mph`);
+    console.log(`Wind Direction: ${windDirection}`);
+  })
+  .catch(error => console.error('Error fetching weather data:', error));
+
+
 // Attach functions to the global window object for external calls
 window.calculateFoam = calculateFoam;
 window.toggleMenu = toggleMenu;
