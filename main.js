@@ -175,7 +175,7 @@ fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=$
   })
   .then(data => {
     const windDeg = data.wind.deg;
-    const windSpeed = data.wind.speed;
+    const windSpeed = data.wind.speed.toFixed(1);
 
     const windDirection = getWindDirection(windDeg);
 
