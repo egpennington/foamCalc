@@ -174,16 +174,23 @@ fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=$
     return res.json(); // Close this .then() properly
   })
   .then(data => {
+    const temp = data.main.temp.toFixed(0)
     const windDeg = data.wind.deg;
     const windSpeed = data.wind.speed.toFixed(1);
 
     const windDirection = getWindDirection(windDeg);
 
-    const weatherInfo = `
+    const weatherInfo = `      
       <div class="weather-container">
-        <p>Wind <i class="fa-solid fa-wind"></i></p>
+        <p>
+        <span>${temp}</span>
+        <i class="fa-solid fa-temperature-low"></i>
+        </p>
+        <p>
+        <i class="fa-solid fa-wind"></i>
         <span>${windDirection}</span>
         <span>${windSpeed} mph</span>
+        </p>
       </div>
     `;
 
