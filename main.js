@@ -201,7 +201,9 @@ fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=$
     console.log(`Wind Direction: ${windDirection}`);
   })
   .catch(error => console.error('Error fetching weather data:', error));
-
+/* copyright year */
+const year = new Date().getFullYear()
+document.getElementById('copyright-el').innerHTML =`&copy; ${year}` 
 
 // Attach functions to the global window object for external calls
 window.calculateFoam = calculateFoam;
