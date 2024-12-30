@@ -205,6 +205,20 @@ fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=$
 const year = new Date().getFullYear()
 document.getElementById('copyright-el').innerHTML =`&copy; ${year}` 
 
+const footerSocals = document.querySelectorAll('.footer-socal')
+
+  footerSocals.forEach((socal) => {
+      const hiddenElement = socal.querySelector('.hidden')
+
+      socal.addEventListener('mouseenter', () => {
+          hiddenElement.style.display = 'block'
+      })
+
+      socal.addEventListener('mouseleave', () => {
+          hiddenElement.style.display = 'none'
+      })
+  })
+
 // Attach functions to the global window object for external calls
 window.calculateFoam = calculateFoam;
 window.toggleMenu = toggleMenu;

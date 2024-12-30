@@ -440,3 +440,40 @@ footer {
     margin-top: auto;
 }
 
+.hidden {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: #212529;
+  color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+footer .social {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social p {
+  font-size: 0.8;
+}
+
+footer .social a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-family: var(--alt-family);
+}
+
+footer a:hover {
+  color: #d2bb8c;
+}
