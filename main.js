@@ -80,6 +80,15 @@ function calculateTankVolumes(tank) {
 }
 
 function calculateFoam() {
+  // New foam updated application rates
+  function getFoamRate(diameter) {
+    if (diameter < 150) return 0.2
+    if (diameter <= 200) return 0.23
+    if (diameter <= 250) return 0.25
+    if (diameter <= 300) return 0.28
+    return 0.31    
+  }
+
   calculateEffect()
   const tankNumber = parseInt(document.getElementById("tankNumber").value);
 
@@ -93,7 +102,8 @@ function calculateFoam() {
   // Calculate square footage
   const diameterSq = Math.round(tank.diameter * tank.diameter);
   const sqFoot = Math.round(diameterSq * 0.8); // 80% coverage
-  const criticalRate = Math.round(sqFoot * 0.2); // 20% of covered area
+  const foamRate = getFoamRate(tank.diameter)
+  const criticalRate = Math.round(sqFoot * foamRate) // foam rate now based on diamter
 
   // Foam requirements
   const foam1GPM = Math.round(criticalRate * 0.01); // 1% foam
