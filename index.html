@@ -37,9 +37,40 @@
       </p>
     <h3>How Calculations Are Made</h3>
     <ul>
-      <li><strong>Square Footage:</strong> The base area of the tank is calculated as the square of the diameter (diameter × diameter) multiplied by 0.8 to ensure adequate foam coverage, accounting for safety margins, foam expansion, and surface irregularities.</li>         
-      <li><strong>80% Coverage:</strong> Only 80% of the tank’s area is considered for foam application to account for practical coverage.</li>
-      <li><strong>Critical Application Rate:</strong> This is calculated as 20% (0.2) of the 80% coverage area.</li>
+      <li><strong>Square Footage:</strong> The base area of the tank is calculated as the square of the diameter (diameter × diameter) multiplied by 0.8 to ensure adequate foam coverage, accounting for safety margins, foam expansion, and surface irregularities.</li> 
+              
+      <li><strong>Critical Application Rate:</strong> calculated based on tank diameter.
+        <table class="foam-rate-table">
+          <thead>
+            <tr>
+              <th>Tank Diameter</th>
+              <th>Application Rate (GPM/sq ft)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&lt; 150'</td>
+              <td>0.20</td>
+            </tr>
+            <tr>
+              <td>&lt; 150' - 200'</td>
+              <td>0.23</td>
+            </tr>
+            <tr>
+              <td>201' to 250'</td>
+              <td>0.25</td>
+            </tr>
+            <tr>
+              <td>251' - 300'</td>
+              <td>0.28</td>
+            </tr>
+            <tr>
+              <td>&gt; 300'</td>
+              <td>0.20</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
       <li><strong>Foam Concentrate (1% and 3%):</strong>
         <ul>
           <li>For 1% foam: Multiply the critical application rate by 0.01 (1%).</li>

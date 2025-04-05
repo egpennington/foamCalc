@@ -151,6 +151,26 @@ body {
     color: #fff;
     background: #254d97;
   }
+
+  .foam-rate-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .foam-rate-table th,
+  .foam-rate-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .foam-rate-table thead {
+    background: #1b263b;
+    color: #fff;
+  }
   
  /* ROUTE MODAL Styles */
 .route-popup {
