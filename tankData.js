@@ -16,6 +16,7 @@ const tankData = {
     35: { diameter: 134, capacity: 100000, material: "Jet", containment: 190000, location: "G st and 5th st" },
     36: { diameter: 173, capacity: 200000, material: "Diesel Fuel #2", containment: 540000, location: "I st and 5th st" },
     37: { diameter: 134, capacity: 100000, material: "Light Cycle Oil/Jet A", containment: 309000, location: "C st and 3rd st" },
+    39: { diameter: 34, capacity: 5000, material: "Hot Oil", containment: 8400, location: "B st and 4rd st" },
     40: { diameter: 85, capacity: 40000, material: "Unleaded Gasoline", containment: 167000, location: "A st" },
     41: { diameter: 85, capacity: 40000, material: "Unleaded Gasoline", containment: 167000, location: "B st" },
     42: { diameter: 85, capacity: 40000, material: "Asphalt", containment: 46400, location: "B st" },
