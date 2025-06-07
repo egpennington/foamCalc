@@ -15,6 +15,7 @@ const tankRoutes = {
     "Tank 33": "images/tank33Route.png",
     "Tank 35": "images/tank35Route.png",
     "Tank 36": "../images/tank36Route.png",
+    "Tank 39": "../images/tank39Route.png",
     "Tank 40": "images/tank40Route.png",
     "Tank 41": "images/tank41Route.png",
     "Tank 42": "images/tank42Route.png",
