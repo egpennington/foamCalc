@@ -101,7 +101,10 @@ function calculateFoam() {
 
   // Calculate square footage
   const diameterSq = Math.round(tank.diameter * tank.diameter);
-  const sqFoot = Math.round(diameterSq * 0.8); // 80% coverage
+  // square foot of tank is given, no need to calculate
+  // const sqFoot = Math.round(diameterSq * 0.8); // 80% coverage
+  // add to tankdata base
+  const sqFoot = tank.area;
   const foamRate = getFoamRate(tank.diameter)
   const criticalRate = Math.round(sqFoot * foamRate) // foam rate now based on diamter
 
@@ -118,8 +121,11 @@ function calculateFoam() {
   document.getElementById("tankLocation").textContent = tank.location;
   document.getElementById("tankMaterial").textContent = tank.material;
   document.getElementById("tankCapacity").textContent = tank.capacity.toLocaleString();
+  document.getElementById("tankDiameter").textContent = tank.diameter.toLocaleString();
   document.getElementById("tankContainment").textContent = tank.containment.toLocaleString();
-  document.getElementById("sqFoot").textContent = sqFoot.toLocaleString();
+  document.getElementById("area").textContent = tank.area.toLocaleString();
+  document.getElementById("tankRoof").textContent = tank.roof;  
+
   document.getElementById("criticalRate").textContent = criticalRate.toLocaleString();
   document.getElementById("foam1").textContent = foam1GPM.toLocaleString();
   document.getElementById("foam3").textContent = foam3GPM.toLocaleString();
