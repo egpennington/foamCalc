@@ -1,20 +1,16 @@
 {
-    "name":"Kenai FoamCalc",
-    "short_name":"FoamCalc",
-    "icons":
-        [
-            {
-                "src":"/android-chrome-192x192.png",
-                "sizes":"192x192",
-                "type":"image/png"
-            },
-            {
-                "src":"/android-chrome-512x512.png",
-                "sizes":"512x512",
-                "type":"image/png"
-            }
-        ],
-    "theme_color":"#ffffff",
-    "background_color":"#ffffff",
-    "display":"standalone"
+  "id": "/",
+  "name": "Kenai Foam Calc",
+  "short_name": "Kenai Foam Calc",
+  "description": "Calculates foam needs by tank size, adds real-time weather, and shows clickable routes to each tank for faster emergency response.",
+  "start_url": "./index.html",
+  "scope": "/",
+  "display": "standalone",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "categories": ["utilities", "productivity", "emergency"],
+  "theme_color": "#e86e51",
+  "background_color": "#ffffff"
 }
