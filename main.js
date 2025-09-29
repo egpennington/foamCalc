@@ -120,6 +120,7 @@ function calculateFoam() {
   // Update the UI with results
   document.getElementById("tankLocation").textContent = tank.location;
   document.getElementById("tankMaterial").textContent = tank.material;
+  document.getElementById("tankHydrant").textContent = tank.hydrant;
   document.getElementById("tankCapacity").textContent = tank.capacity.toLocaleString();
   document.getElementById("tankDiameter").textContent = tank.diameter.toLocaleString();
   document.getElementById("tankContainment").textContent = tank.containment.toLocaleString();
@@ -242,4 +243,5 @@ window.recalculateEffect = recalculateEffect;
 window.showAboutPopup = showAboutPopup;
 window.closeAboutPopup = closeAboutPopup;
 window.showTankRoute = showTankRoute;
+
 window.closeTankRoute = closeTankRoute;
