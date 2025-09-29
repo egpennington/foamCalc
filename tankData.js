@@ -21,6 +21,8 @@ const tankData = {
     42: { diameter: 85, area: 5675, capacity: 5675, material: "Asphalt", containment: 46400, location: "B st", roof: "Cone" },
     45: { diameter: 134, area: 14103, capacity: 100000, material: "Naphtha", containment: 190000, location: "G st and 3rd st", roof: "Cone/IFR" },
     51: { diameter: 60, area: 2827, capacity: 20000, material: "Asphalt", containment: 46400, location: "B st", roof: "Cone" },
+    60: { diameter: 52, capacity: 15000, material: "Diesel", containment: 89000, location: "A st and 1st st", hydrant: 4 },
+    61: { diameter: 42.5, capacity: 10000, material: "Gasoline", containment: 89000, location: "B st and 1st st", hydrant: 11 },
     62: { diameter: 95, area: 7088, capacity: 50000, material: "Unleaded Gasoline", containment: 89000, location: "A st and 1st st", roof: "Cone/IFR" },
     63: { diameter: 95, area: 7088, capacity: 50000, material: "Unleaded Gasoline", containment: 89000, location: "B st and 1st st", roof: "Cone/IFR" },
     64: { diameter: 134, area: 14103, capacity: 100000, material: "Unleaded/ Jet A", containment: 190000, location: "E st and 3rd st", roof: "Cone/IFR" },
@@ -37,3 +39,4 @@ const tankData = {
   }
 
   export default tankData
+
