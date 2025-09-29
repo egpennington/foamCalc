@@ -53,6 +53,7 @@ export default function TankSelect({ onRouteOpen }) {
         <div className="tank-info">
           <p><strong>Location:</strong> {tankInfo.location}</p>
           <p><strong>Material:</strong> {tankInfo.material}</p>
+          <p><strong>Hydrant:</strong> {tankInfo.hydrant}</p>
           <p><strong>Capacity:</strong> {tankInfo.capacity.toLocaleString()} gal</p>
           <button onClick={handleRouteClick}>View Route</button>
         </div>
@@ -72,3 +73,4 @@ export default function TankSelect({ onRouteOpen }) {
     </div>
   );
 }
+
