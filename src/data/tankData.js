@@ -21,8 +21,10 @@ const tankData = {
     42: { diameter: 85, capacity: 40000, material: "Asphalt", containment: 46400, location: "B st" },
     45: { diameter: 134, capacity: 100000, material: "Napatha", containment: 190000, location: "G st and 3rd st" },
     51: { diameter: 60, capacity: 20000, material: "Asphalt", containment: 46400, location: "B st" },
+    60: { diameter: 52, capacity: 15000, material: "Diesel", containment: 89000, location: "A st and 1st st", hydrant: 4 },
+    61: { diameter: 42.5, capacity: 10000, material: "Gasoline", containment: 89000, location: "B st and 1st st", hydrant: 11 },
     62: { diameter: 95, capacity: 50000, material: "Unleaded Gasoline", containment: 89000, location: "A st and 1st st" },
-    63: { diameter: 95, capacity: 50000, material: "Unleaded Gasoline", containment: 89000, location: "B st and 1st st" },
+    63: { diameter: 95, capacity: 50000, material: "Unleaded Gasoline", containment: 89000, location: "B st and 1st st", hydrant: 12 },
     64: { diameter: 134, capacity: 100000, material: "UnLeaded Gasoline", containment: 190000, location: "E st and 3rd st" },
     65: { diameter: 134, capacity: 100000, material: "UnLeaded Gasoline", containment: 205000, location: "G st and 3rd st" },
     66: { diameter: 134, capacity: 100000, material: "Sour Naphtha and Kerosene", containment: 205000, location: "H st and 3rd st" },
@@ -35,5 +37,6 @@ const tankData = {
     2407: { diameter: 180, capacity: 235000, material: "Crude Oil", containment: 270000, location: "KPL" },
     2408: { diameter: 180, capacity: 235000, material: "Crude Oil", containment: 270000, location: "KPL" },
   }
+
 
   export default tankData
