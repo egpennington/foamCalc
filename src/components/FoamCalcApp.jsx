@@ -134,6 +134,7 @@ export default function FoamCalcApp() {
           <div>
             <h2>Results for Tank {tankNumber}</h2>
             <p><strong>Location:</strong> {foamResults.tank.location}</p>
+            <p><strong>Hydrant:</strong>strong> {foamResults.tank.hydrant}</p>
             <p><strong>Material:</strong> {foamResults.tank.material}</p>
             <p><strong>Critical Rate:</strong> {foamResults.criticalRate} GPM</p>
             <p><strong>Foam (1%):</strong> {foamResults.totalFoam1} gal</p>
@@ -146,3 +147,4 @@ export default function FoamCalcApp() {
     </>
   )
 }
+
