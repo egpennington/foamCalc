@@ -16,15 +16,15 @@ const tankData = {
     35: { diameter: 134, area: 14103, capacity: 100000, material: "Jet A", containment: 190000, location: "G st and 5th st", roof: "Cone" },
     36: { diameter: 173, area: 23506, capacity: 200000, material: "Diesel Fuel #2", containment: 540000, location: "I st and 5th st", roof: "Cone" },
     37: { diameter: 134, area: 14103, capacity: 100000, material: "Light Cycle Oil/Jet A", containment: 309000, location: "C st and 3rd st", roof: "Cone" },
-    40: { diameter: 85, area: 5675, capacity: 40000, material: "Unleaded Gasoline", containment: 167000, location: "A st", roof: "Cone/IFR" },
-    41: { diameter: 85, area: 5675, capacity: 40000, material: "Unleaded Gasoline", containment: 167000, location: "B st", roof: "Cone/IFR" },
+    40: { diameter: 85, area: 5675, capacity: 40000, material: "Gasoline", containment: 167000, location: "A st", roof: "Cone/IFR" },
+    41: { diameter: 85, area: 5675, capacity: 40000, material: "Gasoline", containment: 167000, location: "B st", roof: "Cone/IFR" },
     42: { diameter: 85, area: 5675, capacity: 5675, material: "Asphalt", containment: 46400, location: "B st", roof: "Cone" },
     45: { diameter: 134, area: 14103, capacity: 100000, material: "Naphtha", containment: 190000, location: "G st and 3rd st", roof: "Cone/IFR" },
     51: { diameter: 60, area: 2827, capacity: 20000, material: "Asphalt", containment: 46400, location: "B st", roof: "Cone" },
     60: { diameter: 52, area: 2124, capacity: 15000, material: "Diesel", containment: 89000, location: "A st and 1st st", hydrant: 4 },
     61: { diameter: 42.5, area: 1419, capacity: 10000, material: "Gasoline", containment: 89000, location: "B st and 1st st", hydrant: 11 },
-    62: { diameter: 95, area: 7088, capacity: 50000, material: "Unleaded Gasoline", containment: 89000, location: "A st and 1st st", roof: "Cone/IFR" },
-    63: { diameter: 95, area: 7088, capacity: 50000, material: "Unleaded Gasoline", containment: 89000, location: "B st and 1st st", roof: "Cone/IFR" },
+    62: { diameter: 95, area: 7088, capacity: 50000, material: "Gasoline", containment: 89000, location: "A st and 1st st", roof: "Cone/IFR" },
+    63: { diameter: 95, area: 7088, capacity: 50000, material: "Gasoline", containment: 89000, location: "B st and 1st st", roof: "Cone/IFR" },
     64: { diameter: 134, area: 14103, capacity: 100000, material: "Unleaded/ Jet A", containment: 190000, location: "E st and 3rd st", roof: "Cone/IFR" },
     65: { diameter: 134, area: 14103, capacity: 100000, material: "UnLeaded Gasoline", containment: 205000, location: "G st and 3rd st", roof: "Cone/IFR" },
     66: { diameter: 134, area: 14103, capacity: 100000, material: "Sour Naphtha and Kerosene", containment: 205000, location: "H st and 3rd st", roof: "Cone/IFR" },
@@ -39,5 +39,6 @@ const tankData = {
   }
 
   export default tankData
+
 
 
