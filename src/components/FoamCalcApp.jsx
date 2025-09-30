@@ -137,6 +137,10 @@ export default function FoamCalcApp() {
             <p><strong>Hydrant:</strong> #{foamResults.tank.hydrant}</p>
             <p><strong>Material:</strong> {foamResults.tank.material}</p>
             <p><strong>Critical Rate:</strong> {foamResults.criticalRate} GPM</p>
+            {/* Only show if this tank has foamSystem */}
+            {foamResults.tank.foamSystem && (
+              <p><strong>Foam System:</strong> {foamResults.tank.foamSystem}</p>
+            )}
             <p><strong>Foam (1%):</strong> {foamResults.totalFoam1} gal</p>
             <p><strong>Foam (3%):</strong> {foamResults.totalFoam3} gal</p>
             <p><strong>Vol/ft:</strong> {foamResults.volumePerFoot} gal</p>
@@ -147,6 +151,7 @@ export default function FoamCalcApp() {
     </>
   )
 }
+
 
 
 
