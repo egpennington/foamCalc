@@ -10,8 +10,8 @@ const tankData = {
     24: { diameter: 95, area: 7088, capacity: 50000, material: "AGO", containment: 205000, location: "G st and 5th st", hydrant: "#34/35 on G st/50 on 5th st", roof: "Cone" },
     25: { diameter: 252, area: 49876, capacity: 425000, material: "Hi Sulfur Vac Bottoms", containment: 540000, location: "I st", hydrant: "#48 H st/#44 on I st", roof: "Cone" },
     30: { diameter: 42.5, area: 1419, capacity: 10000, material: "DF2/Jet A", containment: 167000, location: "A st and 4th st", hydrant: "#7 on 4th st/#6 on A st", roof: "Cone" },
-    31: { diameter: 52, area: 2124, capacity: 15000, material: "DF2/DF1", containment: 167000, location: "A st", roof: "Cone" },
-    32: { diameter: 112, area: 9852, capacity: 70000, material: "DF2/Jet A", containment: 167000, location: "B st and 4th st", roof: "Cone" },
+    31: { diameter: 52, area: 2124, capacity: 15000, material: "DF2/DF1", containment: 167000, location: "A st", hydrant: "#5/6 on A st/#7 on 4th st", roof: "Cone" },
+    32: { diameter: 112, area: 9852, capacity: 70000, material: "DF2/Jet A", containment: 167000, location: "B st and 4th st", hydrant: "#9/10 on B st/#7 on 4th st", roof: "Cone" },
     33: { diameter: 52, area: 2124, capacity: 15000, material: "Bunker/VTB", containment: 46400, location: "B st and 4th st", roof: "Cone"  },
     35: { diameter: 134, area: 14103, capacity: 100000, material: "Jet A", containment: 190000, location: "G st and 5th st", roof: "Cone" },
     36: { diameter: 173, area: 23506, capacity: 200000, material: "Diesel Fuel #2", containment: 540000, location: "I st and 5th st", roof: "Cone" },
@@ -39,6 +39,7 @@ const tankData = {
   }
 
   export default tankData
+
 
 
 
