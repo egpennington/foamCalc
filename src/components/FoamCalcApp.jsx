@@ -131,6 +131,7 @@ export default function FoamCalcApp() {
 
         {/* RESULTS */}
         {foamResults && (
+          <pre>{JSON.stringify(foamResults.tank, null, 2)}</pre> /* for dubuggin */
           <div>
             <h2>Results for Tank {tankNumber}</h2>
             <p><strong>Location:</strong> {foamResults.tank.location}</p>
@@ -151,6 +152,7 @@ export default function FoamCalcApp() {
     </>
   )
 }
+
 
 
 
