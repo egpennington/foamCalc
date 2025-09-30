@@ -6,7 +6,7 @@ const tankData = {
     14: { diameter: 219, area: 37688, capacity: 300000, material: "Crude Oil", containment: 540000, location: "I st",  hydrant: "#42 on 6h st/#43 on I/#47 on H st", roof: "Cone/IFR" },
     20: { diameter: 200, area: 31416, capacity: 223000, material: "Low Sulfur VTB/LCO", containment: 309000, location: "C st and 5th st", hydrant: "#8/9 on B st/#19/20 on C st", roof: "Cone" },
     22: { diameter: 134, area: 14103, capacity: 100000, material: "Diesel/Jet", containment: 190000, location: "E st and 5th st", hydrant: "#36/37 on 5th st", roof: "Cone" },
-    23: { diameter: 219, area: 37688, capacity: 300000, material: "HVGO", containment: 430000, location: "H st and 5th st", hydrant: "#38 on G st/49 on H st/50 and 5th st", roof: "Cone", foam: "semi-fixed: 4115 gpm" },
+    23: { diameter: 219, area: 37688, capacity: 300000, material: "HVGO", containment: 430000, location: "H st and 5th st", hydrant: "#38 on G st/49 on H st/50 and 5th st", roof: "Cone", foamSystem: "4115 gpm" },
     24: { diameter: 95, area: 7088, capacity: 50000, material: "AGO", containment: 205000, location: "G st and 5th st", hydrant: "#34/35 on G st/50 on 5th st", roof: "Cone" },
     25: { diameter: 252, area: 49876, capacity: 425000, material: "Hi Sulfur Vac Bottoms", containment: 540000, location: "I st", hydrant: "#48 H st/#44 on I st", roof: "Cone" },
     30: { diameter: 42.5, area: 1419, capacity: 10000, material: "DF2/Jet A", containment: 167000, location: "A st and 4th st", hydrant: "#7 on 4th st/#6 on A st", roof: "Cone" },
@@ -39,6 +39,7 @@ const tankData = {
   }
 
   export default tankData
+
 
 
 
