@@ -135,7 +135,14 @@ export default function FoamCalcApp() {
           <div>
             <h2>Results for Tank {tankNumber}</h2>
             <p><strong>Location:</strong> {foamResults.tank.location}</p>
-            <p><strong>Hydrant:</strong> #{foamResults.tank.hydrant}</p>
+            <p className="result-item">
+              <strong>🚒 Hydrant:</strong>
+              <span className="hydrant-output">
+              {foamResults.tank.hydrant.split('/').map((h, i) => (
+              <span key={i}>{h.trim()}</span>
+                 ))}
+              </span>
+            </p>
             <p><strong>Material:</strong> {foamResults.tank.material}</p>
             <p><strong>Critical Rate:</strong> {foamResults.criticalRate} GPM</p>
             {/* Only show if this tank has foamSystem */}
@@ -152,6 +159,7 @@ export default function FoamCalcApp() {
     </>
   )
 }
+
 
 
 
