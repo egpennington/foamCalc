@@ -12,15 +12,15 @@ const tankData = {
     30: { diameter: 42.5, area: 1419, capacity: 10000, material: "DF2/Jet A", containment: 167000, location: "A st and 4th st", hydrant: "#7 on 4th st/#6 on A st", roof: "Cone" },
     31: { diameter: 52, area: 2124, capacity: 15000, material: "DF2/DF1", containment: 167000, location: "A st", hydrant: "#5/6 on A st/#7 on 4th st", roof: "Cone" },
     32: { diameter: 112, area: 9852, capacity: 70000, material: "DF2/Jet A", containment: 167000, location: "B st and 4th st", hydrant: "#9/10 on B st/#7 on 4th st", roof: "Cone" },
-    33: { diameter: 52, area: 2124, capacity: 15000, material: "Bunker/VTB", containment: 46400, location: "B st and 4th st", hydrant: "#71 on B st", roof: "Cone"  },
+    33: { diameter: 52, area: 2124, capacity: 15000, material: "Bunker/VTB", containment: 46400, location: "B st and 4th st", hydrant: "#10 on B st/#71/72 East of Tank", roof: "Cone"  },
     35: { diameter: 134, area: 14103, capacity: 100000, material: "Jet A", containment: 190000, location: "G st and 5th st", hydrant: "#34/35 on G st/36 on 5th st", roof: "Cone" },
     36: { diameter: 173, area: 23506, capacity: 200000, material: "Diesel Fuel #2", containment: 540000, location: "I st and 5th st", hydrant: "#45 on I/46 on 5th st/49 on H st", roof: "Cone" },
     37: { diameter: 134, area: 14103, capacity: 100000, material: "Light Cycle Oil/Jet A", containment: 309000, location: "C st and 3rd st", hydrant: "#19/20 on C st/#8/9 on B st", roof: "Cone" },
     40: { diameter: 85, area: 5675, capacity: 40000, material: "Gasoline", containment: 167000, location: "A st", hydrant: "#4/5 on A st/#10/11 on B st", roof: "Cone/IFR" },
     41: { diameter: 85, area: 5675, capacity: 40000, material: "Gasoline", containment: 167000, location: "B st", hydrant: "#10/11 on B st", roof: "Cone/IFR" },
-    42: { diameter: 85, area: 5675, capacity: 5675, material: "Asphalt", containment: 46400, location: "B st", hydrant: "#10/11 on B st/#61/70/71 East of Tank", roof: "Cone" },
+    42: { diameter: 85, area: 5675, capacity: 5675, material: "Asphalt", containment: 46400, location: "B st", hydrant: "#10/11 on B st/#61/71 East of Tank", roof: "Cone" },
     45: { diameter: 134, area: 14103, capacity: 100000, material: "Naphtha", containment: 190000, location: "G st and 3rd st", hydrant: "#31 on 3rd st/#34 on G st", roof: "Cone/IFR" },
-    51: { diameter: 60, area: 2827, capacity: 20000, material: "Asphalt", containment: 46400, location: "B st", hydrant: "#11 on B st/#61 East of Tank", roof: "Cone" },
+    51: { diameter: 60, area: 2827, capacity: 20000, material: "Asphalt", containment: 46400, location: "B st", hydrant: "#11 on B st/#60/61 East of Tank", roof: "Cone" },
     60: { diameter: 52, area: 2124, capacity: 15000, material: "Diesel", containment: 89000, location: "A st and 1st st", hydrant: "#11 B st.", roof: "IFR" },
     61: { diameter: 42.5, area: 1419, capacity: 10000, material: "Gasoline", containment: 89000, location: "B st and 1st st", hydrant: "#11 B st.", roof: "IFR" },
     62: { diameter: 95, area: 7088, capacity: 50000, material: "Gasoline", containment: 89000, location: "A st and 1st st", hydrant: "#3 on A st.", roof: "Cone/IFR" },
@@ -39,6 +39,7 @@ const tankData = {
   }
 
   export default tankData
+
 
 
 
