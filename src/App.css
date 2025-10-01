@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+.hydrant-output {
+  display: grid;        /* stack hydrants nicely */
+  gap: 0.25rem;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #111;
+}
+
+/* optional: make them look like pills/tags */
+.hydrant-output span {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #f8fafc;
+}
+
