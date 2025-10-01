@@ -138,8 +138,8 @@ export default function FoamCalcApp() {
             <p className="result-item">
               <strong>🚒 Hydrant:</strong>
               <span className="hydrant-output">
-              {foamResults.tank.hydrant.split('/').map((h, i) => (
-              <span key={i}>{h.trim()}</span>
+                 {foamResults.tank.hydrant.split('/').map((h, i) => (
+                   <span key={i}>{h.trim()}</span>
                  ))}
               </span>
             </p>
@@ -159,6 +159,7 @@ export default function FoamCalcApp() {
     </>
   )
 }
+
 
 
 
