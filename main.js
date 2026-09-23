@@ -1,7 +1,6 @@
 import tankData from './tankData.js';
 import tankRoutes from './tankRoutes.js';
 
-
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const hamburger = document.querySelector(".hamburger");
@@ -23,13 +22,37 @@ function closeAboutPopup() {
 }
 
 function showInstallPopup() {
-  const installPopup = document.getElementById("install-popup")
-  installPopup.classList.add("show")
+  openPopup("install-popup")
 }
 
 function closeInstallPopup() {
-  const installPopup = document.getElementById("install-popup")
-  installPopup.classList.remove("show")
+  closePopup("install-popup")
+}
+
+function openPopup(id) {
+  document.getElementById(id).classList.add("show")
+}
+
+function closePopup(id) {
+  document.getElementById(id).classList.remove("show")
+}
+
+function showAndroidInstall() {
+  closePopup("install-popup")
+  openPopup("android-install-popup")
+}
+
+function closeAndroidInstall() {
+  closePopup("android-install-popup")
+}
+
+function showIphoneInstall() {
+  closePopup("install-popup")
+  openPopup("iphone-install-popup")
+}
+
+function closeIphoneInstall() {
+  closePopup("iphone-install-popup")
 }
 
 function showTankRoute(tankNumber) {
@@ -254,6 +277,13 @@ window.recalculateEffect = recalculateEffect;
 window.showAboutPopup = showAboutPopup;
 window.closeAboutPopup = closeAboutPopup;
 window.showTankRoute = showTankRoute;
+
+window.closeTankRoute = closeTankRoute;
+
 window.showInstallPopup = showInstallPopup
 window.closeInstallPopup = closeInstallPopup
-window.closeTankRoute = closeTankRoute;
+
+window.showAndroidInstall = showAndroidInstall
+window.closeAndroidInstall = closeAndroidInstall
+window.showIphoneInstall = showIphoneInstall
+window.closeIphoneInstall = closeIphoneInstall

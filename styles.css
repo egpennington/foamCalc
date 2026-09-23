@@ -171,37 +171,6 @@ body {
     background: #1b263b;
     color: #fff;
   }
-  
-/* Install Popup Styles */
-/* INSTALL GUIDE POPUP */
-
-.install-popup {
-  width: 400px;
-  padding: 25px;
-}
-
-.install-popup h2 {
-  margin-top: 0;
-  padding-right: 40px;
-}
-
-.install-popup h3 {
-  margin-top: 22px;
-  margin-bottom: 8px;
-  color: #1B263B;
-}
-
-.install-popup p {
-  margin-top: 0;
-  line-height: 1.5;
-}
-
-.install-popup .close-about {
-  width: auto;
-  padding: 5px 10px;
-  top: 10px;
-  right: 10px;
-}
 
  /* ROUTE MODAL Styles */
 .route-popup {
@@ -384,9 +353,6 @@ body {
     margin-bottom: 5px;
 }
 
-
-
-  
   /* BUTTON Styles */
 button {
     width: 98%;
@@ -515,7 +481,7 @@ footer .social {
 }
 
 footer .social p {
-  font-size: 0.8;
+  font-size: 0.8rem;
 }
 
 footer .social a {
@@ -527,4 +493,80 @@ footer .social a {
 
 footer a:hover {
   color: #d2bb8c;
+}
+
+/* INSTALL GUIDE */
+
+.install-popup {
+  width: 360px;
+  padding: 25px;
+}
+
+.install-popup h2 {
+  margin: 0 0 8px;
+  padding-right: 35px;
+  color: #1B263B;
+}
+
+.install-popup > p {
+  margin: 0 0 22px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.install-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.install-options button {
+  width: 100%;
+  padding: 16px;
+  background: #f4f4f9;
+  color: #1B263B;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.install-options button:hover {
+  background: #e9eef7;
+  border-color: #254d97;
+  transform: none;
+}
+
+.install-options button i {
+  width: 28px;
+  color: #254d97;
+  font-size: 1.2rem;
+}
+
+.install-step {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 14px 0;
+  text-align: center;
+  line-height: 1.4;
+  background: #f9f9f9;
+  color: #1B263B;
+}
+
+.install-popup .close-about {
+  width: auto;
+  padding: 4px 8px;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: #254d97;
+}
+
+.install-popup .close-about:hover {
+  background: #254d97;
+  color: #fff;
+  transform: none;
 }

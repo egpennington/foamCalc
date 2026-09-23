@@ -99,26 +99,70 @@
     </button>
 
     <h2>Install FoamCalc</h2>
+    <p>Add FoamCalc to your home screen for quick access.</p>
 
-    <h3>Android - Chrome</h3>
-    <p>
-      Open the browser menu and select
-      <strong>Install app</strong> or
-      <strong>Add to Home screen</strong>.
-    </p>
+    <div class="install-options">
+      <button onclick="showAndroidInstall()">
+        <i class="fa-brands fa-android"></i>
+        Android Directions
+      </button>
 
-    <h3>Android - Samsung Internet</h3>
-    <p>
-      Open the browser menu and select
-      <strong>Add page to</strong>, then
-      <strong>Home screen</strong>.
-    </p>
+      <button onclick="showIphoneInstall()">
+        <i class="fa-brands fa-apple"></i>
+        iPhone Directions
+      </button>
+    </div>
+  </article>
 
-    <h3>iPhone - Safari</h3>
-    <p>
-      Tap the <strong>Share</strong> button and select
-      <strong>Add to Home Screen</strong>.
-    </p>
+  <article id="android-install-popup" class="about-popup install-popup">
+    <button onclick="closeAndroidInstall()" class="close-about">
+      &times;
+    </button>
+
+    <h2>Android Directions</h2>
+
+    <div class="install-step">
+      <strong>1.</strong> Open FoamCalc in your browser.
+    </div>
+
+    <div class="install-step">
+      <strong>2.</strong> Open the browser menu (three dots).
+    </div>
+
+    <div class="install-step">
+      <strong>3.</strong> Scroll down to<strong>"Add Home Screen" or "Install and create shortcut"</strong>
+      <p>and click on it.</p>
+      <p>click on <strong>Install or Create shortcut</strong> or <strong>Add or Install</strong></p>
+    </div>
+
+    <div class="install-step">
+      <strong>4.</strong> Tap <strong>Install</strong> or
+      <strong>Add</strong> to confirm.
+    </div>
+  </article>
+
+  <article id="iphone-install-popup" class="about-popup install-popup">
+    <button onclick="closeIphoneInstall()" class="close-about">
+      &times;
+    </button>
+
+    <h2>iPhone Directions</h2>
+
+    <div class="install-step">
+      <strong>1.</strong> Open FoamCalc in Safari.
+    </div>
+
+    <div class="install-step">
+      <strong>2.</strong> Tap the Share button.
+    </div>
+
+    <div class="install-step">
+      <strong>3.</strong> Select <strong>Add to Home Screen</strong>.
+    </div>
+
+    <div class="install-step">
+      <strong>4.</strong> Tap <strong>Add</strong>.
+    </div>
   </article>
 
   <div class="container">
