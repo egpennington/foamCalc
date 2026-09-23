@@ -172,6 +172,37 @@ body {
     color: #fff;
   }
   
+/* Install Popup Styles */
+/* INSTALL GUIDE POPUP */
+
+.install-popup {
+  width: 400px;
+  padding: 25px;
+}
+
+.install-popup h2 {
+  margin-top: 0;
+  padding-right: 40px;
+}
+
+.install-popup h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  color: #1B263B;
+}
+
+.install-popup p {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.install-popup .close-about {
+  width: auto;
+  padding: 5px 10px;
+  top: 10px;
+  right: 10px;
+}
+
  /* ROUTE MODAL Styles */
 .route-popup {
     display: none;

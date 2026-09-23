@@ -1,6 +1,7 @@
 import tankData from './tankData.js';
 import tankRoutes from './tankRoutes.js';
 
+
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const hamburger = document.querySelector(".hamburger");
@@ -19,6 +20,16 @@ function showAboutPopup() {
 function closeAboutPopup() {
   const aboutPopup = document.getElementById("about-popup");
   aboutPopup.classList.remove("show");
+}
+
+function showInstallPopup() {
+  const installPopup = document.getElementById("install-popup")
+  installPopup.classList.add("show")
+}
+
+function closeInstallPopup() {
+  const installPopup = document.getElementById("install-popup")
+  installPopup.classList.remove("show")
 }
 
 function showTankRoute(tankNumber) {
@@ -243,5 +254,6 @@ window.recalculateEffect = recalculateEffect;
 window.showAboutPopup = showAboutPopup;
 window.closeAboutPopup = closeAboutPopup;
 window.showTankRoute = showTankRoute;
-
+window.showInstallPopup = showInstallPopup
+window.closeInstallPopup = closeInstallPopup
 window.closeTankRoute = closeTankRoute;
